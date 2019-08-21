@@ -511,7 +511,8 @@ button:focus {
 
 .mu-about-content-right {
 	display: inline;
-	float: left;
+  float: left;
+  text-align: left;
 	margin-top: 20px;
 	width: 100%;
 }
