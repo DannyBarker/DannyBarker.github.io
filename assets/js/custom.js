@@ -1,22 +1,22 @@
-/**	
+/**
 	* Template Name: Kevin
-	* Version: 1.0	
+	* Version: 1.0
 	* Template Scripts
 	* Author: MarkUps
 	* Author URI: http://www.markups.io/
 
 	Custom JS
-	
+
 	1. FIXED MENU
 	2. FEATURED SLIDE ( TYPED SLIDER )
 	3. SKILL PROGRESS BAR
 	4. MENU SMOOTH SCROLLING
-	5. MOBILE MENU CLOSE  
+	5. MOBILE MENU CLOSE
 	6. PORTFOLIO GALLERY
 	7. PORTFOLIO POPUP VIEW ( IMAGE LIGHTBOX )
 	8. CLIENT TESTIMONIALS ( SLICK SLIDER )
 	9. BUTTON SMOOTH SCROLL ( VIEW MY WORK )
-	
+
 **/
 
 
@@ -34,27 +34,27 @@
     if ($(window).scrollTop() > 100) {
 
         $('#mu-header').addClass('mu-fixed-nav');
-        
+
 	    } else {
 	        $('#mu-header').removeClass('mu-fixed-nav');
 	    }
 	});
 
-		
+
 	/* ----------------------------------------------------------- */
 	/*  2. FEATURED SLIDE (TYPED SLIDER)
 	/* ----------------------------------------------------------- */
 
 		var typed = new Typed('#typed', {
 		    stringsElement: '#typed-strings',
-		    typeSpeed: 20,
+		    typeSpeed: 45,
 		    backSpeed: 20,
 		    startDelay: 1000,
 		    loop: true,
 		    loopCount: Infinity
 		});
 
-		
+
 	/* ----------------------------------------------------------- */
 	/*  3. SKILL PROGRESS BAR
 	/* ----------------------------------------------------------- */
@@ -62,27 +62,22 @@
 		$('.mu-skill-progress-bar').appear(function() {
 
 		 	$('.mu-html5-bar').LineProgressbar({
-				percentage: 95,
-				triggerOnce: true
-			});
-
-			$('.mu-css-bar').LineProgressbar({
-				percentage: 90,
-				triggerOnce: true
-			});
-
-			$('.mu-photoshop-bar').LineProgressbar({
 				percentage: 85,
 				triggerOnce: true
 			});
 
-			$('.mu-wordpress-bar').LineProgressbar({
+			$('.mu-css-bar').LineProgressbar({
+				percentage: 70,
+				triggerOnce: true
+			});
+
+			$('.mu-photoshop-bar').LineProgressbar({
 				percentage: 80,
 				triggerOnce: true
 			});
 
-			$('.mu-jquery-bar').LineProgressbar({
-				percentage: 55,
+			$('.mu-wordpress-bar').LineProgressbar({
+				percentage: 75,
 				triggerOnce: true
 			});
 
@@ -92,7 +87,7 @@
 
 	/* ----------------------------------------------------------- */
 	/*  4. MENU SMOOTH SCROLLING
-	/* ----------------------------------------------------------- */ 
+	/* ----------------------------------------------------------- */
 
 		//MENU SCROLLING WITH ACTIVE ITEM SELECTED
 
@@ -113,7 +108,7 @@
 		menuItems.click(function(e){
 		  var href = $(this).attr("href"),
 		      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+22;
-		  jQuery('html, body').stop().animate({ 
+		  jQuery('html, body').stop().animate({
 		      scrollTop: offsetTop
 		  }, 1500);
 		  e.preventDefault();
@@ -123,7 +118,7 @@
 		jQuery(window).scroll(function(){
 		   // Get container scroll position
 		   var fromTop = $(this).scrollTop()+topMenuHeight;
-		   
+
 		   // Get id of current scroll item
 		   var cur = scrollItems.map(function(){
 		     if ($(this).offset().top < fromTop)
@@ -132,20 +127,20 @@
 		   // Get the id of the current element
 		   cur = cur[cur.length-1];
 		   var id = cur && cur.length ? cur[0].id : "";
-		   
+
 		   if (lastId !== id) {
 		       lastId = id;
 		       // Set/remove active class
 		       menuItems
 		         .parent().removeClass("active")
 		         .end().filter("[href=\\#"+id+"]").parent().addClass("active");
-		   }           
+		   }
 		});
 
 
 	/* ----------------------------------------------------------- */
-	/*  5. MOBILE MENU CLOSE 
-	/* ----------------------------------------------------------- */ 
+	/*  5. MOBILE MENU CLOSE
+	/* ----------------------------------------------------------- */
 
 		jQuery('.mu-menu').on('click', 'li a', function() {
 		  $('.in').collapse('hide');
@@ -154,7 +149,7 @@
 
 	/* ----------------------------------------------------------- */
 	/*  6. PORTFOLIO GALLERY
-	/* ----------------------------------------------------------- */ 
+	/* ----------------------------------------------------------- */
 		$('.filtr-container').filterizr();
 
 		//Simple filter controls
@@ -166,7 +161,7 @@
 
 	/* ----------------------------------------------------------- */
 	/*  7. PORTFOLIO POPUP VIEW ( IMAGE LIGHTBOX )
-	/* ----------------------------------------------------------- */ 
+	/* ----------------------------------------------------------- */
 
 	$('.mu-filter-imglink').magnificPopup({
 	  type: 'image',
@@ -207,10 +202,9 @@
 
 
 
-	
+
 })( jQuery );
 
 
 
-  
-	
+
