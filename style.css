@@ -31,9 +31,6 @@
   content: "\e901";
   color: #1572b6;
 }
-.icon-django:before {
-  content: "\e902";
-}
 .icon-html5:before {
   content: "\e903";
   color: #e34f26;
@@ -49,6 +46,10 @@
 .icon-react:before {
   content: "\e906";
   color: #61dafb;
+}
+.icon-django:before {
+  content: "\e902";
+  color: #092e20
 }
 /*
 Template Name: Kevin
