@@ -1162,7 +1162,8 @@ div.mu-contact-top-single a div i:hover {
 
 	.navbar-brand img {
 		width: 145px;
-		margin-top: -10px;
+    margin-top: -10px;
+    object-fit: contain;
 	}
 
 	.navbar-default .mu-menu li a {
